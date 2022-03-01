@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>526,2965</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>744.8,2917.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -32,6 +32,9 @@
       <x:String>UiPath.Core</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -56,10 +59,11 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckPackageStatus" sap:VirtualizedContainerService.HintSize="486,2885" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckPackageStatus" sap:VirtualizedContainerService.HintSize="524.8,2852.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Package" />
       <Variable x:TypeArguments="x:String" Name="Text" />
@@ -73,8 +77,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="464,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;EPM | View Package Status&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;EPM | View Package Status&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[Package]</OutArgument>
       </Assign.To>
@@ -82,7 +86,7 @@
         <InArgument x:TypeArguments="x:String">[in_Package]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -94,14 +98,14 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2283869d81f94a359d327e369e4fb694" Selector="&lt;wnd app='excel.exe' ctrlname='RunPackageDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='btnViewStatus' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9b947a72-6aa3-47c2-b462-09ceb85bafb5" InformativeScreenshot="2283869d81f94a359d327e369e4fb694" Selector="&lt;wnd app='excel.exe' ctrlname='RunPackageDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='btnViewStatus' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -113,14 +117,14 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="64ffc70f6042d17e5f4c2378088123e9" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelTop' /&gt;&lt;wnd ctrlname='comboBoxFilterBy' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0a437eef-3a4d-45ab-9b21-840f6a185c22" InformativeScreenshot="64ffc70f6042d17e5f4c2378088123e9" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelTop' /&gt;&lt;wnd ctrlname='comboBoxFilterBy' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'list item  Package'" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Package">
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Item 'list item  Package'" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Package">
       <ui:SelectItem.Items>
         <scg:List x:TypeArguments="x:String" Capacity="4">
           <x:String>Status</x:String>
@@ -129,14 +133,14 @@
         </scg:List>
       </ui:SelectItem.Items>
       <ui:SelectItem.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="09fb28991244a978bf489ab0c4e0ea70" Selector="&lt;wnd app='excel.exe' cls='ComboLBox' /&gt;&lt;ctrl name='Filter type' role='list' /&gt;&lt;ctrl name='Package' role='list item' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c477e098-c74f-4301-aee5-79c6e8d1ed41" InformativeScreenshot="09fb28991244a978bf489ab0c4e0ea70" Selector="&lt;wnd app='excel.exe' cls='ComboLBox' /&gt;&lt;ctrl name='Filter type' role='list' /&gt;&lt;ctrl name='Package' role='list item' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:SelectItem.Target>
     </ui:SelectItem>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_DOUBLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -148,14 +152,14 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="439c77cf539d11f2ffeed8234843eb4f" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnRefresh' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a80e5cbb-8d9c-489d-bd1f-b770b19da6e8" InformativeScreenshot="439c77cf539d11f2ffeed8234843eb4f" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnRefresh' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.COMBOBOX...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -167,14 +171,14 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1d4503be3718a9d28e0894ab9c5e4810" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelTop' /&gt;&lt;wnd ctrlname='comboBoxFilterValue' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="38c52d96-e8bb-45e3-b5e6-649a00efda9e" InformativeScreenshot="1d4503be3718a9d28e0894ab9c5e4810" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelTop' /&gt;&lt;wnd ctrlname='comboBoxFilterValue' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'list item'" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_Package]">
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Item 'list item'" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[in_Package]">
       <ui:SelectItem.Items>
         <scg:List x:TypeArguments="x:String" Capacity="16">
           <x:String>All</x:String>
@@ -196,14 +200,14 @@
         </scg:List>
       </ui:SelectItem.Items>
       <ui:SelectItem.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5b8a5ed89968a55e3bd8b597bd7a68d4" Selector="&lt;wnd app='excel.exe' cls='ComboLBox' /&gt;&lt;ctrl name='Filter value' role='list' /&gt;&lt;ctrl omit:name='CALCULATE_EBITDA' role='list item' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6979d7ef-8356-4a82-a972-db8f2f1bd055" InformativeScreenshot="5b8a5ed89968a55e3bd8b597bd7a68d4" Selector="&lt;wnd app='excel.exe' cls='ComboLBox' /&gt;&lt;ctrl name='Filter value' role='list' /&gt;&lt;ctrl omit:name='CALCULATE_EBITDA' role='list item' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:SelectItem.Target>
     </ui:SelectItem>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_DOUBLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -215,33 +219,33 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="439c77cf539d11f2ffeed8234843eb4f" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnRefresh' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="90aa83fb-5939-4993-8b26-5eed93f9c489" InformativeScreenshot="439c77cf539d11f2ffeed8234843eb4f" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnRefresh' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Check ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Check_1">
+    <ui:Check ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" AlterIfDisabled="True" DisplayName="Check 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Check_1">
       <ui:Check.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="88cb090cdaa2d340e2df8a4c8e9cdd96" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='flowLayoutPanel1' /&gt;&lt;wnd ctrlname='checkBoxRefreshStatus' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77a3ee10-6107-4139-976b-08fed2a90e25" InformativeScreenshot="88cb090cdaa2d340e2df8a4c8e9cdd96" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='flowLayoutPanel1' /&gt;&lt;wnd ctrlname='checkBoxRefreshStatus' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
         </ui:Target>
       </ui:Check.Target>
     </ui:Check>
-    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,785" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[TextStatus.Equals(&quot;Running&quot;)]">
-      <Sequence sap:VirtualizedContainerService.HintSize="336,623" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="483.2,757.6" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[TextStatus.Equals(&quot;Running&quot;)]">
+      <Sequence sap:VirtualizedContainerService.HintSize="375.2,595.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-        <ui:GetVisibleText WordsInfo="{x:Null}" DisplayName="Get Visible Text 'list item  Warning'" FormattedText="False" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="GetVisibleText_5">
+        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+        <ui:GetVisibleText WordsInfo="{x:Null}" DisplayName="Get Visible Text 'list item  Warning'" FormattedText="False" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetVisibleText_5">
           <ui:GetVisibleText.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="89f49b4505520617d12cf98a0273b604" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelMain' /&gt;&lt;wnd ctrlname='listViewStatus' /&gt;&lt;ctrl idx='1' omit:name='Warning' role='list item' /&gt;" WaitForReady="INTERACTIVE">
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f0764b75-8b51-425d-bfe2-d87763d4019b" InformativeScreenshot="89f49b4505520617d12cf98a0273b604" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelMain' /&gt;&lt;wnd ctrlname='listViewStatus' /&gt;&lt;ctrl idx='1' omit:name='Warning' role='list item' /&gt;" WaitForReady="INTERACTIVE">
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -251,7 +255,7 @@
             <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
           </ui:GetVisibleText.Text>
         </ui:GetVisibleText>
-        <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_9">
           <Assign.To>
             <OutArgument x:TypeArguments="s:String[]">[TextSplit]</OutArgument>
           </Assign.To>
@@ -259,7 +263,7 @@
             <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[Text.Split("  ".ToCharArray, StringSplitOptions.RemoveEmptyEntries)]</InArgument>
           </Assign.Value>
         </Assign>
-        <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_10">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[TextStatus]</OutArgument>
           </Assign.To>
@@ -267,10 +271,10 @@
             <InArgument x:TypeArguments="x:String">[TextSplit(0)]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;EPM | &quot; + TextSplit(1) + &quot; : &quot; + TextStatus]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;EPM | &quot; + TextSplit(1) + &quot; : &quot; + TextStatus]" />
       </Sequence>
     </DoWhile>
-    <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+    <Assign sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_11">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_Status]</OutArgument>
       </Assign.To>
@@ -278,17 +282,34 @@
         <InArgument x:TypeArguments="x:String">[TextStatus]</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[out_Status.Contains(&quot;Failed&quot;)]" sap:VirtualizedContainerService.HintSize="464,235" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[out_Status.Contains(&quot;Failed&quot;)]" sap:VirtualizedContainerService.HintSize="483.2,248.8" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
-          <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="in_Folder">Exceptions_Screenshots</InArgument>
-            <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[out_FilePath]</InOutArgument>
-          </ui:InvokeWorkflowFile.Arguments>
-        </ui:InvokeWorkflowFile>
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">Exceptions_Screenshots</InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[out_FilePath]</InOutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </Sequence>
+          </ui:CommentOut.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:CommentOut>
       </If.Then>
     </If>
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'WindowsForms10.BUTTON.a...'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -300,7 +321,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5fb914cfed4f61db53bf427744dc3b8e" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnClose' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="649b621a-0d99-4627-a662-854181b51462" InformativeScreenshot="5fb914cfed4f61db53bf427744dc3b8e" Selector="&lt;wnd app='excel.exe' ctrlname='PackageStatusDialog' /&gt;&lt;wnd ctrlname='panelBottom' /&gt;&lt;wnd ctrlname='btnClose' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
