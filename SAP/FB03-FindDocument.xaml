@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1102,1890</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1110.4,1688</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -31,6 +31,7 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -54,27 +55,26 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FB03-FindDocument" sap:VirtualizedContainerService.HintSize="1062,1810" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="FB03-FindDocument" sap:VirtualizedContainerService.HintSize="1120.8,1623.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavigateTCode workflow" sap:VirtualizedContainerService.HintSize="1040,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Library\SAP\NavigateTCode.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Tcode">/nFB03</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SapSession">1</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Display'" sap:VirtualizedContainerService.HintSize="1040,1559" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="adfa0aae6434c27906fe00a8b5d78fab" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Initial Screen' /&gt;">
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Display'" sap:VirtualizedContainerService.HintSize="1079.2,1530.4" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="adfa0aae6434c27906fe00a8b5d78fab" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Initial Screen' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1026,1413" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1045.6,1383.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="ChooseYearExists" />
             </Sequence.Variables>
@@ -83,34 +83,34 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'TextField Accounting'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_DocumentNumber]">
+            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Type Into 'TextField Accounting'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_DocumentNumber]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="61c60ecc9b47a913643451619e57ecb0" Selector="&lt;sap id='usr/txtRF05L-BELNR' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="604ee488-3dc4-4ab6-b80c-4ba2c038f14d" InformativeScreenshot="61c60ecc9b47a913643451619e57ecb0" Selector="&lt;sap id='usr/txtRF05L-BELNR' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  Company Code'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="1000">
+            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Type Into 'CTextField  Company Code'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="1000">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f62fbeaf5fbdef8b9929ec79a9b26fee" Selector="&lt;sap id='usr/ctxtRF05L-BUKRS' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed09a556-0b1c-4fa8-b739-cff1bf33db54" InformativeScreenshot="f62fbeaf5fbdef8b9929ec79a9b26fee" Selector="&lt;sap id='usr/ctxtRF05L-BUKRS' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  Fiscal Year'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[in_FiscalYear]">
+            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Type Into 'TextField  Fiscal Year'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1004,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[in_FiscalYear]">
               <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dee010aae30f4aeb99275ae5c88b9467" Selector="&lt;sap id='usr/txtRF05L-GJAHR' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="845df1fd-bd0c-40e2-a685-8839a5899bb5" InformativeScreenshot="dee010aae30f4aeb99275ae5c88b9467" Selector="&lt;sap id='usr/txtRF05L-GJAHR' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'Button  Enter'" sap:VirtualizedContainerService.HintSize="1004,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'Button  Enter'" sap:VirtualizedContainerService.HintSize="1004,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -122,7 +122,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1e03d90146e83fb3bf5a059c243842a1" Selector="&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd5c9b02-8e4b-4117-a258-5f2d70cf8fa4" InformativeScreenshot="1e03d90146e83fb3bf5a059c243842a1" Selector="&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -159,7 +159,7 @@
                     </Sequence>
                   </ui:OnUiElementAppear.Body>
                   <ui:OnUiElementAppear.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9343938f116ddaae0f27d17a3cb9ef70" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Data Entry View' /&gt;&lt;sap id='usr/cntlCTRL_CONTAINERBSEG/shellcont/shell' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e697a71-34b5-4b12-be6f-bb5e86b397dc" InformativeScreenshot="9343938f116ddaae0f27d17a3cb9ef70" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Document: Data Entry View' /&gt;&lt;sap id='usr/cntlCTRL_CONTAINERBSEG/shellcont/shell' /&gt;" WaitForReady="INTERACTIVE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -175,7 +175,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Choose'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Choose'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -187,7 +187,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5e54eb394b972344afea1df02e7c4870" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2d263847-5a76-45fa-8735-ae08c04a059f" InformativeScreenshot="5e54eb394b972344afea1df02e7c4870" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -197,7 +197,7 @@
                   </Sequence>
                 </ui:OnUiElementAppear.Body>
                 <ui:OnUiElementAppear.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2a232d22544190c095994d6bcf9723cc" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='usr' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6eb3ea2d-b513-447f-a57b-040cae1c5d49" InformativeScreenshot="2a232d22544190c095994d6bcf9723cc" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='usr' /&gt;" WaitForReady="INTERACTIVE">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -215,12 +215,12 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:UiElementExists DisplayName="Element Exists 'saplogon.exe Choose'" Exists="[ChooseYearExists]" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="23b2678544261ea17fac1caffd26b15c" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='usr/tblSAPLF004GJTABCONTROL' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fbff8f91-abd4-4640-842a-a2e6d111eecd" InformativeScreenshot="23b2678544261ea17fac1caffd26b15c" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='usr/tblSAPLF004GJTABCONTROL' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
                   <If Condition="[ChooseYearExists]" sap:VirtualizedContainerService.HintSize="464,253" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Choose'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Choose'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -232,7 +232,7 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7fcbe5876134079154600449a147a450" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a7b4f151-f275-45c1-9c3d-23ba8504f505" InformativeScreenshot="7fcbe5876134079154600449a147a450" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Choose year' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;" WaitForReady="INTERACTIVE">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
